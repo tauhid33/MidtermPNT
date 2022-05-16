@@ -1,16 +1,17 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
-
-
-
+ Computer programming language is a set of commands, instructions and other syntax used to create a software program.
 
 What jdk contains or composed of and define each components?
-A.
+Java Runtime Environment(JRE): is part of the Java development kit that contains and orchestrates the set of tools and
+minimum requirements for executing a Java application. In order for the Java program to execute, it needs a runtime environment
+to load the class files. JRE contains a Java class loader.
 
+Java Virtual Machine(JVM): JVM has two primary functions. It allows Java programs to run on any operation system "Write once, Run
+Anywhere". Also, it manages and optimizes program memory.
 
-
+Java Development Kit (JDK):
 
 
 What is IDE?
