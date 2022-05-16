@@ -36,9 +36,6 @@ First in First Out and Last In First Out.
 
 what is the order of complexity?
 
-Time complexity describes how the runtime of an algorithm changes depending on the amount of input data.
-The most common complexity classes are (in ascending order of complexity): O(1), O(log n), O(n), O(n log n), O(n²).
-
 what is the best case to search an element from an array?
 Best case is to use the Map, ArrayList and also Set to search and element from an array.
 
@@ -56,10 +53,6 @@ what is the difference between the HashTable and HashMap?
 HashTable is synchronized and HashMap is not synchronized.
 
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
-RDBMS = Array
-Network data model = Graph
-Hierarchical data model = Trees
-
 How HashMap works in java?
 By using the Key Value pair
 
@@ -77,7 +70,6 @@ randomly using the array index. Random accessing is not possible in linked lists
 
 What is DFS and BFS?
 BFS is an algorithm that is used to graph data or searching tree or traversing structures.
-DFS is an algorithm for finding or traversing graphs or trees in depth-ward direction.
 
 What is Recursion?
 Recursion is when a method calls itself.
@@ -87,35 +79,14 @@ Linear datas are stored in a linear way i.e. ArrayList, Set and Linked List
 Non Linear are Graphs and Trees.
 
 What is Big-(O)-notation?
-Big O notation is the language we use for talking about how long an algorithm takes to run. It's how we compare the
-efficiency of different approaches to a problem.
-
+***
 Outlined different kind of sorting algorithm with time complexity?
-Bubble Sort: This sorting technique involves the comparison of two adjacent elements of the vector.
-If we are sorting in ascending order then the one which turns out to be greater among the two is pushed towards
-the right and the smaller element is pushed towards the left.
-
-Selection Sort: In this method of sorting we select one element from the vector at a time, compare
-it with all the other elements, and decide the correct position of this particular element in the vector.
-
-Insertion Sort: It is very similar to sorting cards. Divide the vector into two parts, one sorted and the other one
-unsorted. Now, we insert cards(elements) from the unsorted part into the sorted part at their correct position.
-This method is also quadratic with N.
-
+***
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
   c)In terms of Searching element.
   d)In terms of Removing element.
-
-  Data structure	Access	Search	Insertion	Removing
-  Array	O(1)	O(N)	O(N)	O(N)
-  Stack	O(N)	O(N)	O(1)	O(1)
-  Queue	O(N)	O(N)	O(1)	O(1)
-  Singly Linked list	O(N)	O(N)	O(1)	O(1)
-  Doubly Linked List	O(N)	O(N)	O(1)	O(1)
-  Hash Table	O(1)	O(1)	O(1)	O(1)
-  Binary Search Tree	O(log N)	O(log N)	O(log N)	O(log N)
 
 
