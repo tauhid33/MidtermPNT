@@ -16,7 +16,18 @@ public class LowestNumber {
 
 		//find lowest number from the array
 
-		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
+		int min= array[0];
+
+		for (int i=0; i<array.length; i++){
+				if (array[i]<min) {
+					min = array[i];
+				}
+		}
+		System.out.println("the lowest number is :" + min);
+
+
+
+		/*ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		List<String> lowestValue = new ArrayList<String>();
 		try {
 			connectToSqlDB.insertDataFromArrayToSqlTable(array, "tbl_lowestNumber", "column_lowestNumber");
@@ -28,7 +39,7 @@ public class LowestNumber {
 		System.out.println("Data is reading from the Table (tbl_primenumber) and displaying to the console");
 		for(String st:lowestValue){
 			System.out.println(st);
-		}
+		}*/
 	}
 
 }

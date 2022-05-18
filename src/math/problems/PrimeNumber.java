@@ -1,5 +1,8 @@
 package math.problems;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PrimeNumber {
 
 	public static void main(String[] args) {
@@ -13,6 +16,28 @@ public class PrimeNumber {
 		 *
 		 */
 
-	}
+		List<Integer> primeNumbers = new ArrayList<>();
 
+		for(int numberToCheck =2; numberToCheck <=100000; numberToCheck++) {
+
+			boolean isPrime = true;
+
+			for(int factor = 2; factor <=numberToCheck/2; factor++)
+				if(numberToCheck % factor ==0) {
+					isPrime = false;
+					break;
+				}
+			if(isPrime) {
+				primeNumbers.add(numberToCheck);
+			}
+		}
+		System.out.println("Prime numbers from 1 to 100000 are ");
+		for(int number: primeNumbers) {
+			System.out.print(number + ",");
+
+		}
+
+
+
+	}
 }

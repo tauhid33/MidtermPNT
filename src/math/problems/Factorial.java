@@ -9,5 +9,19 @@ public class Factorial {
          *
          */
 
+
+        int num = 5;
+        long factorial = 1;
+
+        for(int i = 1; i <= num; i++)
+        {
+            factorial =i * factorial;
+        }
+        System.out.print("Factorial of 5! = "+ factorial);
     }
-}
+
+
+
+
+    }
+

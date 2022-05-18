@@ -26,12 +26,9 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
+         </dependency>
+
+
     </dependencies>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
