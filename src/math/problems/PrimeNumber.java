@@ -15,29 +15,29 @@ public class PrimeNumber {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
 		 */
+		primeNumber(1000000);
+	}
 
-		List<Integer> primeNumbers = new ArrayList<>();
-
-		for(int numberToCheck =2; numberToCheck <=100000; numberToCheck++) {
-
+	public static int primeNumber(int maxNumber) {
+		int num;
+		for (num = 2; num <= maxNumber; num++) {
 			boolean isPrime = true;
-
-			for(int factor = 2; factor <=numberToCheck/2; factor++)
-				if(numberToCheck % factor ==0) {
+			for (int i = 2; i <= num / 2; i++) {
+				if (num % i == 0) {
 					isPrime = false;
 					break;
 				}
-			if(isPrime) {
-				primeNumbers.add(numberToCheck);
+			}
+			if (isPrime == true) {
+				System.out.println(num);
 			}
 		}
-		System.out.println("Prime numbers from 1 to 100000 are ");
-		for(int number: primeNumbers) {
-			System.out.print(number + ",");
-
-		}
-
-
-
+		return num;
 	}
+
+	// String str = String.valueOf(num);
+	// ConnectToSqlDB connect = new ConnectToSqlDB();
+	// connect.insertDataFromStringToSqlTable(str, "prime", "prime-numbers");
+
+
 }

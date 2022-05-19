@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends EmployeeAbstract {
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -21,6 +21,13 @@ public class EmployeeInfo {
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
+	private String performance;
+	private double salary;
+	private int employeeId;
+	private int year;
+	private double pension;
+	private String employeeName;
+	private String department;
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
@@ -33,10 +40,12 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
+		this.employeeId = employeeId;
 		
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+		this.employeeId = employeeId;
+		this.employeeName = name;
 	}
 	
 	/*
@@ -47,9 +56,21 @@ public class EmployeeInfo {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
-		int total=0;
-		return total;
+	public static double calculateEmployeeBonus(double salary, String performance ){
+		double bonus=0.0;
+
+		if (performance == "best"){
+			bonus = salary * (10/100);
+		}
+		else if (performance == "average"){
+			bonus = salary * (8/100);
+		}
+		else if(performance == "poor")   {
+			bonus = 0.0;
+		}
+
+		return bonus;
+
 	}
 	
 	/*
@@ -75,6 +96,32 @@ public class EmployeeInfo {
 
 		return total;
 	}
+
+	@Override
+	public int employeeId() {
+		return 0;
+	}
+
+	@Override
+	public String employeeName() {
+		return null;
+	}
+
+	@Override
+	public void assignDepartment() {
+
+	}
+
+	@Override
+	public int calculateSalary() {
+		return 0;
+	}
+
+	@Override
+	public void benefitLayout() {
+
+	}
+
 	private static class DateConversion {
 
 		public DateConversion(Months months){}

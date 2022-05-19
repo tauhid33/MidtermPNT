@@ -8,27 +8,29 @@ public class Pattern {
 		 *
 		 *
 		 */
-		int n = 100;
-		for (int i = 1; i <= 100; i++) {
-			if(n>90) {
-				System.out.print(n + " ");
-				n--;
-			} else if ( n>70) {
-				System.out.print(n + " ");
-				n= n-2;
-			} else if (n>40) {
-				System.out.print(n + " ");
-				n= n-3;
-			}
-			else if (n>30){
-				System.out.print(n + " ");
-				n= n-4;
-			}
-			}
 
-		}
-		
-
-
+		Pattern.pattern();
 	}
+	// Use the For loop to iterate from the maximum value
+	public static int pattern(){
+		int i;
+		//String sub = "";
+		for(i = 100; i >= 0; i--) {
+			if(i >= 90 && i <= 100){
+				i = i ;
+			}else if(i <= 90 && i >= 70){
+				i --;
+			}else if(i <= 70 && i >= 40){
+				i -= 2;
+			}else{
+				i -= 3;
+			}
+			System.out.print(i+",");
+			//sub = ",";
+		}
+		return i;
+	}
+
+}
+
 

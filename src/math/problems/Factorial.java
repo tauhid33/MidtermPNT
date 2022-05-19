@@ -9,15 +9,23 @@ public class Factorial {
          *
          */
 
+        int n = 5;
+        System.out.println("The Factorial of " + n + "! = " + factorial(n));
+    }
 
-        int num = 5;
-        long factorial = 1;
-
-        for(int i = 1; i <= num; i++)
-        {
-            factorial =i * factorial;
+    /**
+     * This method calculate the factorial of any argument you pass on the main method
+     return
+     */
+    public static int factorial(int n) {
+        // base case: if n is 0
+        if (n < 1) {
+            return 1;
+        } else { // use the recurrence relation
+            return n * factorial(n - 1);
         }
-        System.out.print("Factorial of 5! = "+ factorial);
+
+
     }
 
 

@@ -246,6 +246,7 @@ TestNG is quite similar to JUnit, but with added functionalities and features su
   parameterization, and more. It is inspired by JUnit and NUnit.
 
 What are the dependencies for this project?
+ mongo java driver, my sql connector and testing
 
 what is dependency injection in java?
 Dependency Injection (DI) is a design pattern that removes the dependency from the programming code so that

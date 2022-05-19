@@ -1,6 +1,7 @@
 package string.problems;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Anagram {
 
@@ -10,22 +11,25 @@ public class Anagram {
 
 
 
-            String word1 = "army";
-            String word2 = "mary";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter two words for Anagram test : ");
+        String st1 = scanner.next();
+        String st2 = scanner.next();
 
-            if (word1.length() == word2.length()) {
-                char[] array1 = word1.toCharArray();
-                Arrays.sort(array1);
-                char[] array2 = word2.toCharArray();
-                Arrays.sort(array2);
+        char[] c1 = st1.toCharArray();
+        char[] c2 = st2.toCharArray();
 
-                if (array1 == array2)
-                    System.out.println("The words "+word1+" and "+word2+" are Anagrams");
-                else
-                    System.out.println("The words "+word1+" and "+word2+" are not Anagrams");
+        Arrays.sort(c1);
+        Arrays.sort(c2);
+
+        if (Arrays.equals(c1, c2)){
+            System.out.println("Yes! it's Anagram");
+        }
+        else
+            System.out.println("No an Anagram, Try again");
 
             }
         }
-    }
+
 
 
