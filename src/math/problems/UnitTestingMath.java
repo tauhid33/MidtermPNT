@@ -46,7 +46,7 @@ public class UnitTestingMath {
         Assert.assertEquals(-1,  actualResult);
         System.out.println("test passed");
     }
-    // Test Prime number
+     //Test Prime number
     /*@Test
     public void testPrime(){
         int expectedResult =31;

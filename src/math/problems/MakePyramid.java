@@ -17,22 +17,24 @@ public class MakePyramid {
 
     /**
      * This method Implement a large Pyramid of stars in the screen using nested for loop
+     *
      * @param rows
      * @return
      */
     public static int pyramid(int rows) {
-        int spaces = rows - 1;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < spaces; j++) {
+        int k = 0;
+        for (int i = 1; i <= rows; i++, k = 0) {
+            for (int space = 0; space <= rows - i; space++) {
                 System.out.print(" ");
             }
-            for (int j = 0; j < (rows - spaces); j++) {
+            while (k != 2 * i - i) {
                 System.out.print("* ");
+                k++;
             }
             System.out.println();
-            spaces--;
         }
         return rows;
     }
 }
+
 

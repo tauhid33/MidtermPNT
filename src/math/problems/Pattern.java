@@ -16,11 +16,11 @@ public class Pattern {
 		int i;
 		//String sub = "";
 		for(i = 100; i >= 0; i--) {
-			if(i >= 90 && i <= 100){
+			if(i >= 90){
 				i = i ;
-			}else if(i <= 90 && i >= 70){
+			}else if(i >= 70){
 				i --;
-			}else if(i <= 70 && i >= 40){
+			}else if(i >= 40){
 				i -= 2;
 			}else{
 				i -= 3;
