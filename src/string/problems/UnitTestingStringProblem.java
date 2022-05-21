@@ -1,8 +1,45 @@
 package string.problems;
 
-public class UnitTestingStringProblem {
-    public static void main(String[] args) {
-        //Apply Unit Test into all the methods in this package.
+import org.junit.Assert;
+import org.junit.Test;
 
+
+import java.util.*;
+
+public class UnitTestingStringProblem {
+
+    //Apply Unit Test into all the methods in this package.
+    @Test
+    public void testanagram() {
+        boolean actualResult = Anagram.isAnagram("cat", "tac");
+        Assert.assertNotEquals( false, actualResult);
+        System.out.println("test passed");
     }
+
+    /*
+    @Test
+    public void testLargestWord() {
+        String str = "Human brain is a biological learning machine";
+        Map<Integer, String> map = new HashMap<>();
+        map = DetermineLargestWord.findTheLargestWord(str);
+        String expectedResult = "biological";
+        String actualResult = "";
+        for (Map.Entry<Integer, String> entry: map.entrySet()) {
+            actualResult = entry.getValue();
+        }
+        Assert.assertEquals("Test fail", expectedResult, actualResult);
+
+     */
+
+
+    // Test Palindrome
+    @Test
+    public void testPermutation() {
+        Set<String> expectedResult = new HashSet<>(Arrays.asList("bob", "obb", "bbo"));
+        Set<String> actualResult = Permutation.getPermutation("bob");
+        Assert.assertEquals("Test Fail", expectedResult, actualResult);
+    }
+
+
 }
+

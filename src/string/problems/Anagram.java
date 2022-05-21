@@ -1,35 +1,45 @@
 package string.problems;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Anagram {
 
     public static void main(String[] args) {
         //Write a Java Program to check if the two String are Anagram. Two String are called Anagram when there is
         //same character but in different order.For example,"CAT" and "ACT", "ARMY" and "MARY".
+        Anagram.isAnagram("ARMY", "MARY");
 
+    }
 
+    public static boolean isAnagram(String str1, String str2) {
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+        boolean boo = false;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter two words for Anagram test : ");
-        String st1 = scanner.next();
-        String st2 = scanner.next();
+        // check if length is same
+        if (str1.length() == str2.length()) {
 
-        char[] c1 = st1.toCharArray();
-        char[] c2 = st2.toCharArray();
+            // convert strings to char array
+            char[] charArray1 = str1.toCharArray();
+            char[] charArray2 = str2.toCharArray();
 
-        Arrays.sort(c1);
-        Arrays.sort(c2);
+            // sort the char array
+            Arrays.sort(charArray1);
+            Arrays.sort(charArray2);
 
-        if (Arrays.equals(c1, c2)){
-            System.out.println("Yes! it's Anagram");
-        }
-        else
-            System.out.println("No an Anagram, Try again");
+            // if sorted char arrays are same
+            // then the string is anagram
+            boolean result = Arrays.equals(charArray1, charArray2);
 
+            if (result) {
+                boo = true;
+                System.out.println(str1+ " and "+str2+ " are anagram!");
+            } else {
+                boo = false;
+                System.out.println(str1+ " and "+str2+ " are not anagram!");
             }
         }
+        return boo;
 
-
-
+    }
+}
