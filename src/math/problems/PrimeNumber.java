@@ -19,7 +19,7 @@ public class PrimeNumber {
 
 		List<Integer> primeNumbers = new ArrayList<>();
 
-		for(int numberToCheck =2; numberToCheck <=100000; numberToCheck++) {
+		for(int numberToCheck =2; numberToCheck <=1000000; numberToCheck++) {
 
 			boolean isPrime = true;
 
